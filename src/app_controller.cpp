@@ -6,6 +6,7 @@
 #include <allegro_flare/framework.h>
 #include <dr_runner/emitters/user_event_emitter.h>
 #include <dr_runner/screens/title_screen.h>
+#include <dr_runner/screens/game_play_screen.h>
 #include <dr_runner/app_events.h>
 
 
@@ -36,10 +37,13 @@ void AppController::user_event_func()
             display,
             "Dr. Runner",
             {
-               { "start", START_GAME_PLAY_SCREEN_EVENT },
+               { "start", START_GAME_PLAY_EVENT },
                { "exit",  QUIT_GAME_EVENT }
             }
          });
+      break;
+   case START_GAME_PLAY_EVENT:
+      current_screen.reset(new GamePlayScreen{display});
       break;
    case QUIT_GAME_EVENT:
       Framework::shutdown_program = true;
