@@ -7,7 +7,7 @@
 
 
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
    Framework::initialize();
    Config config = Framework::get_config();
