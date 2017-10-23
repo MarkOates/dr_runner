@@ -11,11 +11,12 @@ int main(int argc, char **argv)
 {
    Framework::initialize();
    Config config = Framework::get_config();
-   Display *d = Framework::create_display(
-         config.get_or_default_int("GLOBAL_SETTINGS", "resolution_x", 800),
-         config.get_or_default_int("GLOBAL_SETTINGS", "resolution_y", 600)
+   Display *display = Framework::create_display(
+         config.get_or_default_int("GLOBAL_SETTINGS", "resolution_x", 1280),
+         config.get_or_default_int("GLOBAL_SETTINGS", "resolution_y", 720),
+         ALLEGRO_OPENGL | ALLEGRO_PROGRAMMABLE_PIPELINE
       );
-   AppController app_controller(d);
+   AppController app_controller(display);
    Framework::run_loop();
 
    return 0;
