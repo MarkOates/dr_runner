@@ -5,9 +5,11 @@
 
 
 
-Entity::Base::Base(Entity::type_t type)
+Entity::Base::Base(Entity::type_t type, std::shared_ptr<SpriteSheet> sprite_sheet)
    : type(type)
    , state(0)
+   , sprite_sheet(sprite_sheet)
+   , bitmap(nullptr)
    , placement()
    , velocity(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 {
