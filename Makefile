@@ -22,7 +22,7 @@ PROJECT_DIR=$(LIBS_ROOT)/$(PROJECT_NAME_SNAKE_CASE)
 # these are the names of the libs you are linking
 ALLEGRO_FLARE_LIB=allegro_flare-0.8.9wip
 ALLEGRO_LIBS=-lallegro_color -lallegro_font -lallegro_ttf -lallegro_dialog -lallegro_audio -lallegro_acodec -lallegro_primitives -lallegro_image -lallegro_main -lallegro
-ALLEGRO_LIBS_FOR_TESTS=-lallegro_color -lallegro_font -lallegro_ttf -lallegro_dialog -lallegro_audio -lallegro_acodec -lallegro_primitives -lallegro_image -lallegro
+ALLEGRO_LIBS_FOR_TESTS=-lallegro_color -lallegro_font -lallegro_ttf -lallegro_dialog -lallegro_audio -lallegro_acodec -lallegro_primitives -lallegro_image -lallegro_main -lallegro
 OPENGL_LIB=-framework OpenGL
 # OPENGL_LIB=-lopengl32
 # OPENGL_LIB=-lGL
