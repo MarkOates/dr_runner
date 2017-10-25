@@ -2,7 +2,7 @@
 
 
 
-#include <allegro5/allegro_image.h>
+#include <allegro5/allegro.h>
 #include <allegro_flare/placement2d.h>
 #include <dr_runner/models/entity.h>
 #include <dr_runner/models/sprite_sheet.h>
