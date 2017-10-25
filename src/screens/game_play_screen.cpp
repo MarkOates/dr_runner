@@ -17,6 +17,7 @@ GamePlayScreen::GamePlayScreen(Display *display)
    : Screen(display)
    , audio_controller( { JUMP_SOUND }, { GAME_PLAY_MUSIC } )
    , state(PLAYING)
+   , entities()
 {
    audio_controller.play_music(GAME_PLAY_MUSIC);
 }
@@ -44,6 +45,13 @@ void GamePlayScreen::key_down_func()
       UserEventEmitter::emit_event(START_TITLE_SCREEN_EVENT);
       break;
    }
+}
+
+
+
+void GamePlayScreen::draw_scene()
+{
+   for (auto &entity : entities) entity->draw();
 }
 
 
